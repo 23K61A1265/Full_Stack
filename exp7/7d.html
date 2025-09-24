@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Math Object Demo</h1>
+    <button onclick="mathDemo()">Show Math Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function mathDemo() {
+            let result = "";
+
+            // Properties
+            result += "<b>Math.PI:</b> " + Math.PI + "<br>";
+            result += "<b>Math.E:</b> " + Math.E + "<br><br>";
+
+            // Methods
+            result += "<b>Math.sqrt(25):</b> " + Math.sqrt(25) + "<br>";
+            result += "<b>Math.pow(2, 4):</b> " + Math.pow(2, 4) + "<br>";
+            result += "<b>Math.round(4.6):</b> " + Math.round(4.6) + "<br>";
+            result += "<b>Math.floor(4.9):</b> " + Math.floor(4.9) + "<br>";
+            result += "<b>Math.ceil(4.1):</b> " + Math.ceil(4.1) + "<br>";
+            result += "<b>Math.min(10, 5, 20, 3):</b> " + Math.min(10, 5, 20, 3) + "<br>";
+            result += "<b>Math.max(10, 5, 20, 3):</b> " + Math.max(10, 5, 20, 3) + "<br>";
+            result += "<b>Math.random():</b> " + Math.random() + "<br>";
+
+            // Print result on page
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
+

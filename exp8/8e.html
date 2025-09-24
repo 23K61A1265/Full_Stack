@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Armstrong Number Check</title>
+</head>
+<body>
+    <h1>Check Armstrong Number</h1>
+    <button onclick="checkArmstrong()">Enter Number</button>
+    <div id="output"></div>
+
+    <script>
+        function checkArmstrong() {
+            let num = parseInt(prompt("Enter a number:"));
+            let sum = 0;
+            let temp = num;
+            let digits = num.toString().length;
+
+            // Calculate sum of powers of digits
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum += Math.pow(digit, digits);
+                temp = Math.floor(temp / 10);
+            }
+
+            // Check Armstrong condition
+            let result = "";
+            if (sum === num) {
+                result = "<b>" + num + " is an ARMSTRONG NUMBER</b>";
+            } else {
+                result = "<b>" + num + " is NOT an ARMSTRONG NUMBER</b>";
+            }
+
+            // Display result
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

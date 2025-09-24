@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User-Defined Object Example</title>
+</head>
+<body>
+    <h1>JavaScript User-Defined Object Demo</h1>
+    <button onclick="showPerson()">Show Person Details</button>
+    <div id="output"></div>
+
+    <script>
+        // Constructor function
+        function Person(name, age) {
+            this.name = name;   // property
+            this.age = age;     // property
+        }
+
+        // Method
+        Person.prototype.sayHello = function() {
+            return "Hello, my name is " + this.name;
+        };
+
+        // Accessors (get & set)
+        Object.defineProperty(Person.prototype, "details", {
+            get: function() {
+                return this.name + " is " + this.age + " years old.";
+            },
+            set: function(newAge) {
+                this.age = newAge;
+            }
+        });
+
+        function showPerson() {
+            let p1 = new Person("Kiran", 19); // creating object
+            let result = "";
+
+            // Display properties
+            result += "<b>Name:</b> " + p1.name + "<br>";
+            result += "<b>Age:</b> " + p1.age + "<br><br>";
+
+            // Display method
+            result += "<b>sayHello():</b> " + p1.sayHello() + "<br><br>";
+
+            // Using getter
+            result += "<b>Getter (details):</b> " + p1.details + "<br>";
+
+            // Using setter
+            p1.details = 25; // calls setter to update age
+            result += "<b>After Setter (details):</b> " + p1.details + "<br>";
+
+            // Print result on page
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

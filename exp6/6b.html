@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Output Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #1a237e;
+    }
+    .demo-box {
+      background: white;
+      padding: 15px;
+      margin: 15px auto;
+      border-radius: 8px;
+      max-width: 700px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    button {
+      margin: 5px 0;
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Output Demo</h1>
+
+<div class="demo-box">
+  <h2>1. Output using document.write()</h2>
+  <button onclick="showDocumentWrite()">Click Me</button>
+</div>
+
+<div class="demo-box">
+  <h2>2. Output using alert()</h2>
+  <button onclick="showAlert()">Click Me</button>
+</div>
+
+<div class="demo-box">
+  <h2>3. Output using console.log()</h2>
+  <button onclick="showConsoleLog()">Click Me</button>
+  <p>Check the browser console to see the output</p>
+</div>
+
+<div class="demo-box">
+  <h2>4. Output using innerHTML</h2>
+  <button onclick="showInnerHTML()">Click Me</button>
+  <p id="output"></p>
+</div>
+
+<script>
+  // 1. document.write()
+  function showDocumentWrite() {
+    document.write("Hello! This is displayed using document.write().");
+  }
+
+  // 2. alert()
+  function showAlert() {
+    alert("Hello! This is displayed using alert().");
+  }
+
+  // 3. console.log()
+  function showConsoleLog() {
+    console.log("Hello! This is displayed using console.log().");
+  }
+
+  // 4. innerHTML
+  function showInnerHTML() {
+    document.getElementById("output").innerHTML = 
+      "Hello! This is displayed using innerHTML.";
+  }
+</script>
+
+</body>
+</html>
+

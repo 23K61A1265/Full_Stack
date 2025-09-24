@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Demo</title>
+    <style>
+        .box-model {
+            width: 500px;               /* content width */
+            padding: 30px;              /* space inside the box, around content */
+            border: 5px solid #d6ad53; /* border around padding */
+            margin: 30px;               /* space outside the border */
+            background-color: #f0f0f0; /* background color of content + padding */
+            font-family: Arial, sans-serif;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #111111;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model Example</h1>
+
+    <div class="box-model">
+        <p><span class="label">Content:</span> This is the content area of the box.</p>
+        <p><span class="label">Padding:</span> Space between content and border (20px).</p>
+        <p><span class="label">Border:</span> Surrounds the padding and content (5px solid green).</p>
+        <p><span class="label">Margin:</span> Space outside the border (30px).</p>
+    </div>
+
+</body>
+</html>

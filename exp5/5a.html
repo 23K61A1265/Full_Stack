@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Color References Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .color-box {
+      width: 70%;
+      height: 80px;
+      line-height: 80px;
+      margin: 15px auto;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Different ways to reference color */
+    .named { background-color: red; }           /* Named color */
+    .hex { background-color: #4caf50; }         /* Hexadecimal */
+    .rgb { background-color: rgb(8, 81, 46); }/* RGB */
+    .rgba { background-color: rgba(32, 34, 196, 0.8); } /* RGBA */
+    .hsl { background-color: hsl(200, 70%, 50%); }       /* HSL */
+    .hsla { background-color: hsla(300, 60%, 50%, 0.7); } /* HSLA */
+  </style>
+</head>
+<body>
+
+  <h1>CSS Color Reference Demo</h1>
+
+  <div class="color-box named">Red Color</div>
+  <div class="color-box hex">Green Color</div>
+  <div class="color-box rgb">Dark Green Color</div>
+  <div class="color-box rgba">Violet Color</div>
+  <div class="color-box hsl">Sky Blue Color</div>
+  <div class="color-box hsla">pink color</div>
+
+</body>
+</html>

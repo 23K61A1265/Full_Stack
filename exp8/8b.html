@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Week Days using Switch</title>
+</head>
+<body>
+    <h1>Display Week Day</h1>
+    <button onclick="showWeekDay()">Enter Day Number</button>
+    <div id="output"></div>
+
+    <script>
+        function showWeekDay() {
+            let dayNum = parseInt(prompt("Enter a number (0-6) for day of the week:"));
+            let dayName = "";
+
+            switch(dayNum) {
+                case 0:
+                    dayName = "Sunday";
+                    break;
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                case 4:
+                    dayName = "Thursday";
+                    break;
+                case 5:
+                    dayName = "Friday";
+                    break;
+                case 6:
+                    dayName = "Saturday";
+                    break;
+                default:
+                    dayName = "Invalid input! Please enter 0-6.";
+            }
+
+            document.getElementById("output").innerHTML = "<b>Day:</b> " + dayName;
+        }
+    </script>
+</body>
+</html>

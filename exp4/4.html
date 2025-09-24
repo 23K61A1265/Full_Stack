@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selector Forms</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 2.2em;
+      text-shadow: 1px 1px 3px #aaa;
+    }
+
+    .section {
+      background: white;
+      border-radius: 12px;
+      margin: 25px auto;
+      padding: 20px;
+      width: 85%;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .section h2 {
+      color: #1565c0;
+      margin-bottom: 15px;
+      border-left: 6px solid #1565c0;
+      padding-left: 10px;
+    }
+
+    .demo-box {
+      padding: 12px;
+      margin: 15px auto;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      background: #fff;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
+      width: 60%;          /* reduced width */
+      max-width: 700px;    /* keeps it neat */
+      text-align: center;  /* center content */
+    }
+
+    /* ---------------- SIMPLE SELECTORS ---------------- */
+    #special {
+      color: crimson;
+      font-weight: bold;
+    }
+    .highlight {
+      background: #fff176;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    h2, h3, p {
+      font-family: Georgia, serif;
+    }
+    * {
+      margin: 6px;
+    }
+
+    /* ---------------- COMBINATORS ---------------- */
+    div em {
+      color: green;
+      font-weight: bold;
+    }
+    section > p {
+      color: purple;
+    }
+    h2 + p {
+      color: orange;
+      font-style: italic;
+    }
+    h3 ~ p {
+      color: teal;
+    }
+
+    /* ---------------- PSEUDO-CLASS ---------------- */
+    a {
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: #bbdefb;
+      color: #0d47a1;
+      transition: 0.3s;
+    }
+    a:hover {
+      background: #0d47a1;
+      color: white;
+    }
+
+    input[type="text"], input[type="password"] {
+      padding: 8px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+    }
+    input:focus {
+      border-color: #2196f3;
+      background: #e3f2fd;
+    }
+
+    /* ---------------- PSEUDO-ELEMENT ---------------- */
+    p::first-letter {
+      font-size: 26px;
+      color: brown;
+      font-weight: bold;
+    }
+    p::after {
+      content: " ✔";  /* small tick after paragraph */
+      color: green;
+      font-size: 18px;
+    }
+
+    /* ---------------- ATTRIBUTE ---------------- */
+    input[type="text"] {
+      background: #fafafa;
+    }
+    a[target="_blank"] {
+      border: 2px dashed #388e3c;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> CSS Selector Forms Demo </h1>
+
+  <!-- SIMPLE SELECTORS -->
+  <div class="section">
+    <h2>1. Simple Selectors</h2>
+    <div class="demo-box" id="special">ID Selector → Crimson text</div>
+    <div class="demo-box"><span class="highlight">Class Selector → Yellow highlight</span></div>
+    <div class="demo-box">Group Selector → Fonts changed for h2, h3, p</div>
+  </div>
+
+  <!-- COMBINATOR SELECTORS -->
+  <div class="section">
+    <h2>2. Combinator Selectors</h2>
+    <div class="demo-box"><div>Descendant → <em>Green text inside div</em></div></div>
+    <div class="demo-box"><section><p>Child Selector → Purple text</p></section></div>
+    <div class="demo-box"><h2>Heading</h2><p>Adjacent sibling → Orange text</p></div>
+    <div class="demo-box"><h3>Heading</h3><p>General sibling → Teal text</p><p>Another teal paragraph</p></div>
+  </div>
+
+  <!-- PSEUDO-CLASS -->
+  <div class="section">
+    <h2>3. Pseudo-class Selectors</h2>
+    <div class="demo-box"><a href="https://www.google.com" target="_blank">Hover over me</a></div>
+    <div class="demo-box"><input type="text" placeholder="Focus me"> <input type="password" placeholder="Password"></div>
+  </div>
+
+  <!-- PSEUDO-ELEMENT -->
+  <div class="section">
+    <h2>4. Pseudo-element Selectors</h2>
+    <div class="demo-box"><p>This paragraph shows first-letter styling and ✔ added after.</p></div>
+  </div>
+
+  <!-- ATTRIBUTE SELECTOR -->
+  <div class="section">
+    <h2>5. Attribute Selectors</h2>
+    <div class="demo-box"><input type="text" placeholder="Text input styled"></div>
+    <div class="demo-box"><a href="https://openai.com" target="_blank">Opens in new tab</a></div>
+  </div>
+
+</body>
+</html>

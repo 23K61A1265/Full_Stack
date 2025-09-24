@@ -1,0 +1,38 @@
+/* Container to align boxes side by side */
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Common Box Styling (same size as previous yellow box) */
+.box {
+  background-color: yellow;
+  border: 2px solid black;
+  padding: 15px;
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 250px;   /* same width as before */
+  height: 150px;  /* same height as before */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Individual Colors */
+.box1 {
+  background-color: rgb(207, 18, 56);
+}
+.box2 {
+  background-color: rgb(59, 168, 107);
+}
+.box3 {
+  background-color: rgb(56, 85, 170);
+}
+.box4 {
+  background-color: rgb(233, 130, 4);
+}
+

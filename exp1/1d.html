@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Thumbnail Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .gallery {
+            display: inline-block;
+            margin: 10px;
+        }
+        .gallery img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover; /* crops if needed */
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+        .gallery img:hover {
+            border-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Thumbnail Image Gallery</h2>
+
+    <div class="gallery">
+        <a href="https://i.pinimg.com/originals/00/e3/ef/00e3ef3b309ca5bd6280aa9f3eeb3e97.jpg" target="_blank">
+            <img src="https://i.pinimg.com/736x/00/e3/ef/00e3ef3b309ca5bd6280aa9f3eeb3e97.jpg" alt="Image 1" width="250" height="250"/>
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a href="https://png.pngtree.com/png-vector/20241217/ourmid/pngtree-cute-anime-girl-png-image_14805560.png" target="_blank">
+            <img src="https://png.pngtree.com/png-vector/20241217/ourmid/pngtree-cute-anime-girl-png-image_14805560.png" alt="Image 2" width="250" height="250" />
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a href="https://t3.ftcdn.net/jpg/09/70/01/02/360_F_970010297_kYjNMC45ELc3vmon4TZfBJmi9cIzXzKr.jpg" target="_blank">
+            <img src="https://t3.ftcdn.net/jpg/09/70/01/02/360_F_970010297_kYjNMC45ELc3vmon4TZfBJmi9cIzXzKr.jpg" alt="Image 3" width="250" height="250"/>
+        </a>
+    </div>
+
+     <div class="gallery">
+        <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMco759Ft2VzcAN_MDC41ABGRzZjJin9Z0HQZ1iOZQGx3WHa2NTMJBzC1Il5vBD3I5fEY&usqp=CAU" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMco759Ft2VzcAN_MDC41ABGRzZjJin9Z0HQZ1iOZQGx3WHa2NTMJBzC1Il5vBD3I5fEY&usqp=CAU" alt="Image 4" width="250" height="250"/>
+        </a>
+    </div>
+
+    <div class="gallery">
+        <a href="https://nobitadp.com/wp-content/uploads/2025/05/cartoon-dp-for-girls-5.webp" target="_blank">
+            <img src="https://nobitadp.com/wp-content/uploads/2025/05/cartoon-dp-for-girls-5.webp" alt="Image 5" width="250" height="250"/>
+        </a>
+    </div>
+</body>
+</html>

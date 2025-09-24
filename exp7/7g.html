@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Date Object Demo</h1>
+    <button onclick="dateDemo()">Show Date Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function dateDemo() {
+            let now = new Date();
+            let result = "";
+
+            // Properties / Get Methods
+            result += "<b>Current Date & Time:</b> " + now + "<br>";
+            result += "<b>Year:</b> " + now.getFullYear() + "<br>";
+            result += "<b>Month (0-11):</b> " + now.getMonth() + "<br>";
+            result += "<b>Date:</b> " + now.getDate() + "<br>";
+            result += "<b>Day of Week (0=Sun):</b> " + now.getDay() + "<br>";
+            result += "<b>Hours:</b> " + now.getHours() + "<br>";
+            result += "<b>Minutes:</b> " + now.getMinutes() + "<br>";
+            result += "<b>Seconds:</b> " + now.getSeconds() + "<br>";
+            result += "<b>Milliseconds:</b> " + now.getMilliseconds() + "<br>";
+            result += "<b>Time (ms since Jan 1, 1970):</b> " + now.getTime() + "<br><br>";
+
+            // Set Methods
+            now.setFullYear(2030);
+            now.setMonth(11); // December
+            now.setDate(25);
+            result += "<b>Modified Date (setFullYear, setMonth, setDate):</b> " + now + "<br>";
+
+            // Print on page
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

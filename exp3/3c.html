@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Types of CSS</title>
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: darkblue;
+      text-align: center;
+    }
+    p {
+      color: green;
+      font-size: 18px;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Inline CSS -->
+  <h1 style="color: red; font-size: 30px;">This is an Inline Styled Heading</h1>
+
+  <!-- Internal CSS -->
+  <p>This paragraph uses <b>internal CSS</b> (color: green, font-size: 18px).</p>
+
+  <!-- External CSS (Boxes Side by Side with Different Colors) -->
+  <div class="container">
+    <div class="box box1">This is Red Color</div>
+    <div class="box box2">This is Green Color</div>
+    <div class="box box3">This is BLue Color</div>
+    <div class="box box4">This is Orange Color</div>
+  </div>
+
+</body>
+</html>
