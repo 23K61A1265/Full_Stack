@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+</head>
+<body>
+    <h1 id="heading">JavaScript Document Object Demo</h1>
+    <p>This is a paragraph in the document.</p>
+    <button onclick="showDocProperties()">Show Document Info</button>
+    <button onclick="changeHeading()">Change Heading</button>
+
+    <script>
+        function showDocProperties() {
+            // Using document object properties
+            alert("Title: " + document.title);
+            alert("URL: " + document.URL);
+            alert("Last Modified: " + document.lastModified);
+        }
+
+        function changeHeading() {
+            // Using document object methods
+            document.getElementById("heading").innerHTML = "Heading Changed Using Document Object!";
+            document.write("<br><b>New Content Written Using document.write()</b>");
+        }
+    </script>
+</body>
+</html>

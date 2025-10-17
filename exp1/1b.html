@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment: Demonstration of Hyperlinks</title>
+</head>
+<body>
+  <h1>Experiment: Working of Hyperlinks in HTML</h1>
+
+  <p>This program demonstrates the usage of the <code>&lt;a&gt;</code> tag in HTML, along with the <code>href</code> and <code>target</code> attributes, to create hyperlinks that navigate to different resources or sections.</p>
+
+  <h2>1. Simple Hyperlink</h2>
+  <p>The following example shows a basic hyperlink using the <code>href</code> attribute:</p>
+  <a href="https://www.google.com">Visit Google</a>
+
+  <h2>2. Hyperlink Opening in a New Tab</h2>
+  <p>By using <code>target="_blank"</code>, the link opens in a new browser tab:</p>
+  <a href="https://www.wikipedia.org" target="_blank">Open Wikipedia in a New Tab</a>
+
+  <h2>3. Hyperlink Opening in the Same Tab</h2>
+  <p>The default behavior (<code>target="_self"</code>) opens the link in the same window or tab:</p>
+  <a href="https://www.youtube.com" target="_self">Go to YouTube</a>
+
+  <h2>4. Internal Hyperlink (Within the Same Page)</h2>
+  <p>Hyperlinks can also navigate to a section within the same document using the <code>href</code> with an ID reference:</p>
+  <a href="#section">Jump to the Section Below</a>
+
+  <h3 id="section">Target Section</h3>
+  <p>This is the destination of the internal hyperlink.</p>
+</body>
+</html>

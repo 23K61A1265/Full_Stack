@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+</head>
+<body>
+    <h1>JavaScript RegExp Object Demo</h1>
+    <button onclick="regexDemo()">Show RegExp Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function regexDemo() {
+            let text = "JavaScript is amazing. I love JavaScript!";
+            let pattern = /JavaScript/g;  // g = global match
+            let result = "";
+
+            // Properties
+            result += "<b>Source:</b> " + pattern.source + "<br>";
+            result += "<b>Global flag:</b> " + pattern.global + "<br>";
+            result += "<b>IgnoreCase flag:</b> " + pattern.ignoreCase + "<br>";
+            result += "<b>Multiline flag:</b> " + pattern.multiline + "<br><br>";
+
+            // Methods
+            result += "<b>test('JavaScript is cool'):</b> " + pattern.test("JavaScript is cool") + "<br>";
+            result += "<b>exec(text):</b> " + pattern.exec(text) + "<br>";
+            result += "<b>text.match(pattern):</b> " + text.match(pattern) + "<br>";
+            result += "<b>text.search(/amazing/):</b> " + text.search(/amazing/) + "<br>";
+            result += "<b>text.replace(pattern,'JS'):</b> " + text.replace(pattern, "JS") + "<br>";
+            result += "<b>text.split(/ /):</b> " + text.split(/ /) + "<br>";
+
+            // Print on page
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

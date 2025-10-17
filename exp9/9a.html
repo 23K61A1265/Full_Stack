@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Operations</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #1a237e;
+      text-shadow: 1px 1px 3px #aaa;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 2px solid #1565c0;
+      width: 200px;
+      margin: 10px;
+      outline: none;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #1565c0;
+      color: white;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0d47a1;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      background: #fff;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      min-width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Number Operations Using Functions</h1>
+  
+  <input type="number" id="num" placeholder="Enter a number">
+  <br>
+
+  <button onclick="findFactorial()">Factorial</button>
+  <button onclick="fibonacciSeries()">Fibonacci</button>
+  <button onclick="primeNumbers()">Prime Numbers</button>
+  <button onclick="checkPalindrome()">Palindrome</button>
+
+  <div id="result"></div>
+
+  <script>
+    // i. Factorial Function
+    function findFactorial() {
+      let n = Number(document.getElementById("num").value);
+      let fact = 1;
+      for (let i = 1; i <= n; i++) fact *= i;
+      document.getElementById("result").innerHTML = `<b>Factorial of ${n}</b> = ${fact}`;
+    }
+
+    // ii. Fibonacci Series Function
+    function fibonacciSeries() {
+      let n = Number(document.getElementById("num").value);
+      let a = 0, b = 1, series = [a];
+      if (n > 1) series.push(b);
+      for (let i = 2; i < n; i++) {
+        let next = a + b;
+        series.push(next);
+        a = b;
+        b = next;
+      }
+      document.getElementById("result").innerHTML = `<b>Fibonacci Series up to ${n}</b>: ${series.join(", ")}`;
+    }
+
+    // iii. Prime Numbers Function
+    function primeNumbers() {
+      let n = Number(document.getElementById("num").value);
+      let primes = [];
+      for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+          if (i % j === 0) { isPrime = false; break; }
+        }
+        if (isPrime) primes.push(i);
+      }
+      document.getElementById("result").innerHTML = `<b>Prime Numbers up to ${n}</b>: ${primes.join(", ")}`;
+    }
+
+    // iv. Palindrome Check Function
+    function checkPalindrome() {
+      let n = document.getElementById("num").value;
+      let reversed = n.split("").reverse().join("");
+      let result = (n === reversed) ? "Yes, it's a Palindrome ✅" : "No, not a Palindrome ❌";
+      document.getElementById("result").innerHTML = `<b>${n}</b> → ${result}`;
+    }
+  </script>
+
+</body>
+</html>

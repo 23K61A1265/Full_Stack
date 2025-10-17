@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e3f2fd; /* very light blue */
+      padding: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #1565c0; /* darker blue */
+      margin-bottom: 25px;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgb(187, 233, 252); /* light blue */
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(21, 101, 192, 0.2);
+    }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 15px;
+    }
+    td {
+      vertical-align: middle;
+      padding: 5px 10px;
+    }
+    td.label {
+      width: 40%;
+      font-weight: 600;
+      color: #0b0c0d; /* strong blue */
+      text-align: right;
+      padding-right: 20px;
+      font-size: 1.1em;
+      user-select: none;
+    }
+    input[type="text"],
+    input[type="password"],
+    input[type="number"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.8px solid #90caf9; /* light blue border */
+      border-radius: 8px;
+      font-size: 1em;
+      color: #0d47a1;
+      background-color: #e3f2fd; /* very light blue */
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+    }
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    input[type="date"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0d47a1;
+      outline: none;
+      background-color: #abc9e2; /* slightly darker blue on focus */
+    }
+    textarea {
+      min-height: 80px;
+    }
+    .checkbox-group, .radio-group {
+      display: flex;
+      gap: 20px;
+      padding-top: 6px;
+    }
+    .checkbox-group label,
+    .radio-group label {
+      font-weight: 500;
+      color: #0d47a1;
+      user-select: none;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      transform: scale(1.15);
+      margin-right: 6px;
+      cursor: pointer;
+    }
+    .buttons {
+      text-align: center;
+      padding-top: 25px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #1565c0;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 0 15px;
+      box-shadow: 0 3px 10px rgba(21, 101, 192, 0.5);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-family: inherit;
+      user-select: none;
+    }
+    input[type="reset"] {
+      background-color: #597a8a; /* soft snuff gray-blue */
+      box-shadow: 0 3px 10px rgba(144, 164, 174, 0.5);
+    }
+    input[type="submit"]:hover {
+      background-color: #0b3d91;
+      box-shadow: 0 6px 18px rgba(11, 61, 145, 0.7);
+    }
+    input[type="reset"]:hover {
+      background-color: #647680;
+      box-shadow: 0 6px 18px rgba(100, 118, 128, 0.7);
+    }
+    /* Responsive for smaller screens */
+    @media (max-width: 650px) {
+      td.label {
+        text-align: left;
+        padding-bottom: 6px;
+        width: 100%;
+      }
+      td {
+        display: block;
+        width: 100%;
+        padding: 0 0 15px 0;
+      }
+      table {
+        border-spacing: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form action="#" method="post">
+    <table>
+      <tr>
+        <td class="label"><label for="fname">First Name:</label></td>
+        <td><input type="text" id="fname" name="firstname" required /></td>
+      </tr>
+      <tr>
+        <td class="label"><label for="lname">Last Name:</label></td>
+        <td><input type="text" id="lname" name="lastname" required /></td>
+      </tr>
+      <tr>
+        <td class="label"><label for="email">Email:</label></td>
+        <td><input type="text" id="email" name="email" required /></td>
+      </tr>
+      <tr>
+        <td class="label"><label for="password">Password:</label></td>
+        <td><input type="password" id="password" name="password" required /></td>
+      </tr>
+      <tr>
+        <td class="label"><label for="age">Age:</label></td>
+        <td><input type="number" id="age" name="age" min="1" max="100" required /></td>
+      </tr>
+      <tr>
+        <td class="label"><label for="dob">Date of Birth:</label></td>
+        <td><input type="date" id="dob" name="dob" required /></td>
+      </tr>
+      <tr>
+        <td class="label">Gender:</td>
+        <td class="radio-group">
+          <label><input type="radio" name="gender" value="male" required /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="label">Hobbies:</td>
+        <td class="checkbox-group">
+          <label><input type="checkbox" name="hobbies" value="reading" /> Reading</label>
+          <label><input type="checkbox" name="hobbies" value="traveling" /> Traveling</label>
+          <label><input type="checkbox" name="hobbies" value="gaming" /> Gaming</label>
+          <label><input type="checkbox" name="hobbies" value="sports" /> Sports</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="label"><label for="country">Country:</label></td>
+        <td>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+            <option value="others">Others</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="label"><label for="address">Address:</label></td>
+        <td><textarea id="address" name="address" placeholder="Enter your address here..."></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="buttons">
+          <input type="submit" value="Register" />
+          <input type="reset" value="Reset" />
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Array Object Demo</h1>
+    <button onclick="arrayDemo()">Show Array Operations</button>
+
+    <script>
+        function arrayDemo() {
+            // Create an array
+            let fruits = ["Apple", "Banana", "Mango"];
+
+            // Using array property
+            alert("Original Array: " + fruits);
+            alert("Length of Array: " + fruits.length);
+
+            // Using array methods
+            fruits.push("Orange");  // add at end
+            alert("After push: " + fruits);
+
+            fruits.pop(); // remove last
+            alert("After pop: " + fruits);
+
+            fruits.unshift("Grapes"); // add at beginning
+            alert("After unshift: " + fruits);
+
+            fruits.shift(); // remove first
+            alert("After shift: " + fruits);
+
+            let sliced = fruits.slice(0, 2); // copy part
+            alert("Sliced Array: " + sliced);
+
+            fruits.sort(); // sort alphabetically
+            alert("Sorted Array: " + fruits);
+
+            fruits.reverse(); // reverse order
+            alert("Reversed Array: " + fruits);
+        }
+    </script>
+</body>
+</html>

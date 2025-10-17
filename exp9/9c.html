@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      color: #004080;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #888;
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0059b3;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: -8px;
+    }
+    .success {
+      color: green;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="regForm" onsubmit="return validateForm()">
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <div id="nameError" class="error"></div>
+
+      <label>Mobile:</label>
+      <input type="text" id="mobile" placeholder="Enter mobile number">
+      <div id="mobileError" class="error"></div>
+
+      <label>Email:</label>
+      <input type="text" id="email" placeholder="Enter email">
+      <div id="emailError" class="error"></div>
+
+      <button type="submit">Register</button>
+    </form>
+    <div id="successMsg" class="success"></div>
+  </div>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let valid = true;
+
+      // Regex patterns
+      let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+      let mobilePattern = /^[0-9]{10}$/;
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+      // Clear old errors
+      document.getElementById("nameError").innerHTML = "";
+      document.getElementById("mobileError").innerHTML = "";
+      document.getElementById("emailError").innerHTML = "";
+      document.getElementById("successMsg").innerHTML = "";
+
+      // Name validation
+      if (!namePattern.test(name)) {
+        document.getElementById("nameError").innerHTML =
+          "Name must start with a letter, followed by letters/numbers, min length 6.";
+        valid = false;
+      }
+
+      // Mobile validation
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById("mobileError").innerHTML =
+          "Mobile must be 10 digits only.";
+        valid = false;
+      }
+
+      // Email validation
+      if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerHTML =
+          "Enter valid email (e.g. name@example.com).";
+        valid = false;
+      }
+
+      // Success message
+      if (valid) {
+        document.getElementById("successMsg").innerHTML =
+          "✅ Registration Successful!";
+      }
+
+      return false; // prevent page reload
+    }
+  </script>
+</body>
+</html>

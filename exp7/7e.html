@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Example</title>
+</head>
+<body>
+    <h1>JavaScript String Object Demo</h1>
+    <button onclick="stringDemo()">Show String Operations</button>
+    <div id="output"></div>
+
+    <script>
+        function stringDemo() {
+            let text = "  Hello JavaScript World!  ";
+            let result = "";
+
+            // Property
+            result += "<b>Original String:</b> '" + text + "'<br>";
+            result += "<b>Length:</b> " + text.length + "<br><br>";
+
+            // Methods
+            result += "<b>toUpperCase():</b> " + text.toUpperCase() + "<br>";
+            result += "<b>toLowerCase():</b> " + text.toLowerCase() + "<br>";
+            result += "<b>charAt(6):</b> " + text.charAt(6) + "<br>";
+            result += "<b>indexOf('JavaScript'):</b> " + text.indexOf("JavaScript") + "<br>";
+            result += "<b>substring(2, 7):</b> " + text.substring(2, 7) + "<br>";
+            result += "<b>slice(2, 9):</b> " + text.slice(2, 9) + "<br>";
+            result += "<b>replace('World','Universe'):</b> " + text.replace("World","Universe") + "<br>";
+            result += "<b>trim():</b> '" + text.trim() + "'<br>";
+            result += "<b>split(' '):</b> " + text.split(" ") + "<br>";
+
+            // Print on page
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

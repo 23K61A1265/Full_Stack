@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Input Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #1a237e;
+    }
+    .demo-box {
+      background: white;
+      padding: 15px;
+      margin: 15px auto;
+      border-radius: 8px;
+      max-width: 700px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Input Demo</h1>
+
+<div class="demo-box">
+  <h2>1. Using prompt()</h2>
+  <button onclick="inputPrompt()">Click Me</button>
+  <p id="promptOutput"></p>
+</div>
+
+<div class="demo-box">
+  <h2>2. Using input field + button</h2>
+  <input type="text" id="textInput" placeholder="Enter your name">
+  <button onclick="inputField()">Submit</button>
+  <p id="fieldOutput"></p>
+</div>
+
+<div class="demo-box">
+  <h2>3. Using multiple inputs + calculation</h2>
+  <input type="number" id="num1" placeholder="Number 1">
+  <input type="number" id="num2" placeholder="Number 2">
+  <button onclick="sumNumbers()">Add</button>
+  <p id="sumOutput"></p>
+</div>
+
+<script>
+  // 1. Using prompt()
+  function inputPrompt() {
+    let name = prompt("Enter your name:");
+    document.getElementById("promptOutput").innerText = 
+      "Hello, " + name + "! (Taken via prompt)";
+  }
+
+  // 2. Using input field + button
+  function inputField() {
+    let name = document.getElementById("textInput").value;
+    document.getElementById("fieldOutput").innerText = 
+      "Hello, " + name + "! (Taken via input field)";
+  }
+
+  // 3. Using multiple input fields for calculation
+  function sumNumbers() {
+    let n1 = Number(document.getElementById("num1").value); // Type conversion
+    let n2 = Number(document.getElementById("num2").value);
+    let sum = n1 + n2;
+    document.getElementById("sumOutput").innerText = 
+      "Sum: " + sum;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal & External JavaScript Demo</title>
+  
+  <!-- External JavaScript -->
+  <script src="6a.js"></script>
+</head>
+<body>
+  <h1>JavaScript Demo</h1>
+
+  <p id="internal-demo">Click the button to see internal JS output</p>
+  <button onclick="internalFunction()">Run Internal JS</button>
+
+  <p id="external-demo">Click the button to see external JS output</p>
+  <button onclick="externalFunction()">Run External JS</button>
+
+  <!-- Internal JavaScript -->
+  <script>
+    function internalFunction() {
+      let name = prompt("Enter your name:");
+      document.getElementById("internal-demo").innerText = 
+        "Hello, " + name + "! This is from Internal JS.";
+    }
+  </script>
+</body>
+</html>

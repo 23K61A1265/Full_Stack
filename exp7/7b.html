@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Example</title>
+</head>
+<body>
+    <h1>JavaScript Window Object Demo</h1>
+    <button onclick="showWindowProperties()">Show Window Info</button>
+    <button onclick="openNewWindow()">Open New Window</button>
+    <button onclick="closeNewWindow()">Close New Window</button>
+
+    <script>
+        let newWin;
+
+        function showWindowProperties() {
+            // Using window object properties
+            alert("Window inner width: " + window.innerWidth);
+            alert("Window inner height: " + window.innerHeight);
+            alert("Screen available width: " + window.screen.availWidth);
+            alert("Screen available height: " + window.screen.availHeight);
+        }
+
+        function openNewWindow() {
+            // Using window.open() method
+            newWin = window.open("", "NewWindow", "width=400,height=300");
+            newWin.document.write("<h2>This is a new window!</h2>");
+        }
+
+        function closeNewWindow() {
+            // Using window.close() method
+            if (newWin) {
+                newWin.close();
+            } else {
+                alert("No window to close!");
+            }
+        }
+    </script>
+</body>
+</html>

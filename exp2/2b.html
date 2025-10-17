@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>III IT B Tech Timetable</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f9faff;
+      margin: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    caption {
+      caption-side: top;
+      font-size: 1.8em;
+      font-weight: 700;
+      padding: 15px 0;
+      color: #34495e;
+      border-bottom: 2px solid #2980b9;
+    }
+    th, td {
+      border: 1px solid #2980b9;
+      padding: 12px 8px;
+      font-size: 1em;
+      color: #2c3e50;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .break {
+      background-color: #d6e9fe; /* light blue pastel */
+      color: #1565c0; /* darker blue text */
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    td[rowspan="6"] {
+      background-color: #e3f2fd; /* very light blue pastel */
+      color: #1565c0;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    tr:nth-child(even) td:not(.break):not([rowspan]) {
+      background-color: #f9fbff;
+    }
+  </style>
+</head>
+<body>
+
+<h2>III IT-A => Weekly Timetable</h2>
+
+<table>
+  <caption>Class Timetable with Breaks and Lunch</caption>
+  <tr>
+    <th>Day / Period</th>
+    <th>09:00 - 10:00</th>
+    <th>10:00 - 11:00</th>
+    <th>11:00 - 11:10</th>
+    <th>11:10 - 12:10</th>
+    <th>12:10 - 01:10</th>
+    <th>01:10 - 02:10</th>
+    <th>02:10 - 03:10</th>
+    <th>03:10 - 04:30</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>AT&amp;CD</td>
+    <td>DWDM</td>
+    <td class="break" rowspan="6">Break</td>
+    <td>AOR</td>
+    <td>AJ</td>
+    <td rowspan="6">Lunch</td>
+    <td>AJ Lab (R&amp;D Project Lab)</td>
+    <td>AJ</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>CN</td>
+    <td>TPL</td>
+    <td>DWDM</td>
+    <td>AOR</td>
+    <td>AT&amp;CD</td>
+    <td>AJ</td>
+  </tr>
+  <tr>
+    <td>Wednesday</td>
+    <td>AJ</td>
+    <td>CN</td>
+    <td>TT</td>
+    <td>Sports</td>
+    <td colspan="4">CN Lab (R&amp;D Project Lab)</td>
+  </tr>
+  <tr>
+    <td>Thursday</td>
+    <td>Communication Skill</td>
+    <td>AOR</td>
+    <td>AT&amp;CD</td>
+    <td>AJ</td>
+    <td>CN</td>
+    <td>MATHS</td>
+  </tr>
+  <tr>
+    <td>Friday</td>
+    <td>DWDM</td>
+    <td>CN</td>
+    <td colspan="2">UI Lab (R&amp;D Project Lab)</td>
+    <td colspan="2">Aptitude</td>
+  </tr>
+  <tr>
+    <td>Saturday</td>
+    <td>AOR</td>
+    <td>FST</td>
+    <td colspan="2">FSD 1 Lab (IT Computer Lab)</td>
+    <td>DWDM</td>
+    <td>AT&amp;CD</td>
+  </tr>
+</table>
+
+</body>
+</html>

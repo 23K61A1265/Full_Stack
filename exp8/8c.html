@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loops Example</title>
+</head>
+<body>
+    <h1>Print Numbers 1 to 10 Using Loops</h1>
+    <button onclick="printNumbers()">Show Numbers</button>
+    <div id="output"></div>
+
+    <script>
+        function printNumbers() {
+            let result = "<b>Using for loop:</b> ";
+            // for loop
+            for (let i = 1; i <= 10; i++) {
+                result += i + " ";
+            }
+            result += "<br><br>";
+
+            // while loop
+            result += "<b>Using while loop:</b> ";
+            let j = 1;
+            while (j <= 8) {
+                result += j + " ";
+                j++;
+            }
+            result += "<br><br>";
+
+            // do-while loop
+            result += "<b>Using do-while loop:</b> ";
+            let k = 1;
+            do {
+                result += k + " ";
+                k++;
+            } while (k <= 5);
+
+            // Display on page
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

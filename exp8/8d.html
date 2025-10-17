@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looping through Objects & Arrays</title>
+</head>
+<body>
+    <h1>Loop Examples: for-in, forEach, for-of</h1>
+    <button onclick="loopDemo()">Show Loops</button>
+    <div id="output"></div>
+
+    <script>
+        function loopDemo() {
+            let result = "";
+
+            // 1️⃣ for-in loop (for objects)
+            let person = {name: "Kiran", age: 19, city: "Hyderabad"};
+            result += "<b>Using for-in loop (object properties):</b><br>";
+            for (let key in person) {
+                result += key + ": " + person[key] + "<br>";
+            }
+            result += "<br>";
+
+            // 2️⃣ forEach loop (for arrays)
+            let fruits = ["Apple", "Banana", "Mango"];
+            result += "<b>Using forEach loop (array elements):</b><br>";
+            fruits.forEach(function(fruit, index) {
+                result += index + ": " + fruit + "<br>";
+            });
+            result += "<br>";
+
+            // 3️⃣ for-of loop (for arrays or iterable objects)
+            result += "<b>Using for-of loop (array elements):</b><br>";
+            for (let fruit of fruits) {
+                result += fruit + "<br>";
+            }
+
+            // Display all results
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
